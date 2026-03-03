@@ -10,7 +10,6 @@
 #include "Array_3.h"
 
 static void setupUtf8Console() {
-    std::setlocale(LC_ALL, "");
 #ifdef _WIN32
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
@@ -48,7 +47,7 @@ int main() {
 
     const int count = static_cast<int>(sizeof(arr) / sizeof(arr[0]));
     for (int i = 0; i < count; ++i) {
-        std::cout << "\n=== Объект #" << i + 1 << " ===" << std::endl;
+        std::cout << "\n=== Object #" << i + 1 << " ===" << std::endl;
         arr[i]->printAuthor();
         arr[i]->print();
         arr[i]->solve();
