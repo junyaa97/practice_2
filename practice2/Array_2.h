@@ -14,4 +14,4 @@ public:
     void solve() override;
 };
 
-#endif // ARRAY_2_H
+#endif 

@@ -15,4 +15,4 @@ public:
     void solve() override;
 };
 
-#endif // ARRAY_1_H
+#endif 

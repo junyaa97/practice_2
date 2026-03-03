@@ -18,31 +18,24 @@ static void setupUtf8Console() {
 
 int main() {
     setupUtf8Console();
-
     const int size = 10;
 
-    Array_1 a1NoParam;
-    Array_1 a1WithParam(size);
-    Array_1 a1Copy(a1WithParam);
-
-    Array_2 a2NoParam;
-    Array_2 a2WithParam(size);
-    Array_2 a2Copy(a2WithParam);
-
-    Array_3 a3NoParam;
-    Array_3 a3WithParam(size);
-    Array_3 a3Copy(a3WithParam);
+    Array_1 tmp1(size);
+    Array_2 tmp2(size);
+    Array_3 tmp3(size);
 
     ArrayBase* arr[] = {
-        new Array_1(a1NoParam),
-        new Array_1(a1WithParam),
-        new Array_1(a1Copy),
-        new Array_2(a2NoParam),
-        new Array_2(a2WithParam),
-        new Array_2(a2Copy),
-        new Array_3(a3NoParam),
-        new Array_3(a3WithParam),
-        new Array_3(a3Copy)
+        new Array_1(),
+        new Array_1(size),
+        new Array_1(tmp1),
+
+        new Array_2(),
+        new Array_2(size),
+        new Array_2(tmp2),
+
+        new Array_3(),
+        new Array_3(size),
+        new Array_3(tmp3),
     };
 
     const int count = static_cast<int>(sizeof(arr) / sizeof(arr[0]));

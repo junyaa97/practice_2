@@ -18,4 +18,4 @@ public:
     virtual void solve() = 0;
 };
 
-#endif // ARRAYBASE_H
+#endif 

@@ -56,7 +56,7 @@ ArrayBase& ArrayBase::operator=(const ArrayBase& other) {
 }
 
 void ArrayBase::printAuthor() const {
-    std::cout << "Выполнила: Петрова Ольга, группа: БББО-11-25, вариант: 17" << std::endl;
+    std::cout << "Выполнила: Петрова О.М., группа: БББО-11-25, вариант: 17" << std::endl;
 }
 
 void ArrayBase::print() const {
