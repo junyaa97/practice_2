@@ -11,6 +11,7 @@ public:
     ~Array_1() override;
     Array_1& operator=(const Array_1& other);
 
+    int countGreaterThan(int D) const;
     void solve() override;
 };
 

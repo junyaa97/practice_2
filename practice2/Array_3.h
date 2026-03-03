@@ -11,6 +11,7 @@ public:
     ~Array_3() override;
     Array_3& operator=(const Array_3& other);
 
+    void reorderByY(int Y);
     void solve() override;
 };
 

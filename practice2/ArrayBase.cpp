@@ -4,7 +4,7 @@
 #include <ctime>
 #include <iostream>
 
-ArrayBase::ArrayBase() : a(nullptr), n(0) {}
+ArrayBase::ArrayBase() : ArrayBase(10) {}
 
 ArrayBase::ArrayBase(int n) : a(nullptr), n(n > 0 ? n : 0) {
     if (this->n > 0) {
@@ -56,7 +56,7 @@ ArrayBase& ArrayBase::operator=(const ArrayBase& other) {
 }
 
 void ArrayBase::printAuthor() const {
-    std::cout << "ФИО: Иванов Иван Иванович, группа: ИВТ-00, вариант: 17" << std::endl;
+    std::cout << "Выполнила: Петрова Ольга, группа: БББО-11-25, вариант: 17" << std::endl;
 }
 
 void ArrayBase::print() const {

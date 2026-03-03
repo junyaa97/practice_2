@@ -29,6 +29,15 @@ void Array_3::solve() {
     std::cout << "[Array_3] Введите Y: ";
     std::cin >> y;
 
+    reorderByY(y);  
+
+    std::cout << "[Array_3] Массив после перестановки:" << std::endl;
+    print();
+}
+
+void Array_3::reorderByY(int y) {
+    if (n == 0 || a == nullptr) return;
+
     int maxValue = a[0];
     for (int i = 1; i < n; ++i) {
         if (a[i] > maxValue) {
@@ -39,22 +48,14 @@ void Array_3::solve() {
     std::vector<int> reordered;
     reordered.reserve(static_cast<std::size_t>(n));
 
-    for (int i = 0; i < n; ++i) {
-        if (std::abs(a[i] - maxValue) <= y) {
+    for (int i = 0; i < n; ++i)
+        if (std::abs(a[i] - maxValue) <= y)
             reordered.push_back(a[i]);
-        }
-    }
 
-    for (int i = 0; i < n; ++i) {
-        if (std::abs(a[i] - maxValue) > y) {
+    for (int i = 0; i < n; ++i)
+        if (std::abs(a[i] - maxValue) > y)
             reordered.push_back(a[i]);
-        }
-    }
 
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
         a[i] = reordered[static_cast<std::size_t>(i)];
-    }
-
-    std::cout << "[Array_3] Массив после перестановки: " << std::endl;
-    print();
 }

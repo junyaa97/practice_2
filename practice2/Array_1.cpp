@@ -17,17 +17,19 @@ Array_1& Array_1::operator=(const Array_1& other) {
     return *this;
 }
 
+int Array_1::countGreaterThan(int D) const {
+    int count = 0;
+    for (int i = 0; i < n; ++i) {
+        if (a[i] > D) ++count;
+    }
+    return count;
+}
+
 void Array_1::solve() {
     int d;
     std::cout << "[Array_1] Введите D: ";
     std::cin >> d;
 
-    int count = 0;
-    for (int i = 0; i < n; ++i) {
-        if (a[i] > d) {
-            ++count;
-        }
-    }
-
-    std::cout << "[Array_1] Количество элементов больше D: " << count << std::endl;
+    int result = countGreaterThan(d); 
+    std::cout << "[Array_1] Количество элементов больше D: " << result << std::endl;
 }
